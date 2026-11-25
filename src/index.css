@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    font-family: Arial, sans-serif;
+    color: #24342f;
+    background: #f5f7f5;
+    font-synthesis: none;
+    line-height: 1.5;
+  }
+
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+
+  button,
+  input,
+  a {
+    @apply focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-emerald-300;
+  }
+}

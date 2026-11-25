@@ -7,18 +7,18 @@ interface SearchFieldProps {
 export function SearchField({ disabled, value, onChange }: SearchFieldProps) {
   return (
     <section
-      className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"
+      className="border-line bg-surface rounded-2xl border p-5 shadow-sm sm:p-6"
       aria-label="Поиск товаров"
     >
       <label
-        className="mb-2 block text-sm font-bold text-slate-800"
+        className="text-content-soft mb-2 block text-sm font-bold"
         htmlFor="search"
       >
         Поиск по названию
       </label>
       <input
         id="search"
-        className="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-base text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-emerald-600 focus:ring-3 focus:ring-emerald-100 disabled:cursor-wait disabled:bg-slate-100"
+        className="border-line-strong bg-field text-content placeholder:text-muted focus:border-accent focus:ring-focus disabled:bg-disabled w-full rounded-lg border px-4 py-3 text-base outline-none transition focus:ring-3 disabled:cursor-wait"
         type="search"
         placeholder="Например, apple"
         autoComplete="off"
@@ -26,7 +26,7 @@ export function SearchField({ disabled, value, onChange }: SearchFieldProps) {
         value={value}
         onChange={(event) => onChange(event.target.value)}
       />
-      <p className="mt-2 text-sm text-slate-600">
+      <p className="text-muted mt-2 text-sm">
         Поиск среди загруженных товаров DummyJSON
       </p>
     </section>

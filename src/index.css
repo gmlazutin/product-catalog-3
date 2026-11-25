@@ -1,23 +1,73 @@
 @import "tailwindcss";
 
+@theme inline {
+  --color-page: var(--theme-page);
+  --color-surface: var(--theme-surface);
+  --color-surface-muted: var(--theme-surface-muted);
+  --color-field: var(--theme-field);
+  --color-content: var(--theme-content);
+  --color-content-soft: var(--theme-content-soft);
+  --color-muted: var(--theme-muted);
+  --color-line: var(--theme-line);
+  --color-line-strong: var(--theme-line-strong);
+  --color-accent: var(--theme-accent);
+  --color-action: var(--theme-action);
+  --color-action-hover: var(--theme-action-hover);
+  --color-focus: var(--theme-focus);
+  --color-disabled: var(--theme-disabled);
+}
+
 @layer base {
   :root {
+    --theme-page: #f8fafc;
+    --theme-surface: #ffffff;
+    --theme-surface-muted: #f1f5f9;
+    --theme-field: #ffffff;
+    --theme-content: #0f172a;
+    --theme-content-soft: #334155;
+    --theme-muted: #64748b;
+    --theme-line: #e2e8f0;
+    --theme-line-strong: #cbd5e1;
+    --theme-accent: #047857;
+    --theme-action: #047857;
+    --theme-action-hover: #065f46;
+    --theme-focus: #d1fae5;
+    --theme-disabled: #f1f5f9;
     font-family: Arial, sans-serif;
-    color: #24342f;
-    background: #f5f7f5;
+    color: var(--theme-content);
+    background: var(--theme-page);
     font-synthesis: none;
     line-height: 1.5;
+  }
+
+  :root.dark {
+    --theme-page: #020617;
+    --theme-surface: #0f172a;
+    --theme-surface-muted: #1e293b;
+    --theme-field: #020617;
+    --theme-content: #f1f5f9;
+    --theme-content-soft: #cbd5e1;
+    --theme-muted: #94a3b8;
+    --theme-line: #1e293b;
+    --theme-line-strong: #334155;
+    --theme-accent: #34d399;
+    --theme-focus: #064e3b;
+    --theme-disabled: #1e293b;
   }
 
   body {
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
+    background: inherit;
+    transition:
+      color 150ms ease,
+      background-color 150ms ease;
   }
 
   button,
   input,
   a {
-    @apply focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-emerald-300;
+    @apply focus-visible:outline-accent focus-visible:outline-3 focus-visible:outline-offset-3;
   }
 }

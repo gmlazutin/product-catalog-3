@@ -3,6 +3,7 @@ import { fetchProducts } from "./api/products";
 import { ProductCard } from "./components/ProductCard";
 import { SearchField } from "./components/SearchField";
 import { StatusMessage } from "./components/StatusMessage";
+import { ThemeToggle } from "./components/ThemeToggle";
 import type { Product } from "./types/product";
 
 type LoadState = "loading" | "success" | "error";
@@ -33,7 +34,7 @@ export function App() {
           return;
         }
 
-        console.error("Не удалось загрузить товары:", error);
+        console.error("Failed to load products:", error);
         setLoadState("error");
       }
     }
@@ -56,16 +57,16 @@ export function App() {
 
   return (
     <main className="mx-auto min-h-screen max-w-7xl px-4 py-8 sm:px-8 sm:py-12">
-      <header className="mb-8 max-w-2xl">
-        <p className="text-sm font-bold tracking-wider text-emerald-700 uppercase">
-          ДЗ №2 · Веб-разработка
-        </p>
-        <h1 className="mt-3 text-4xl leading-tight font-bold tracking-tight text-slate-900 sm:text-5xl">
-          Каталог товаров
-        </h1>
-        <p className="mt-3 text-lg text-slate-600">
-          Небольшая подборка на каждый день. Найдите то, что вам нужно.
-        </p>
+      <header className="mb-8 flex items-start justify-between gap-5">
+        <div className="max-w-2xl">
+          <h1 className="text-content text-4xl leading-tight font-bold tracking-tight sm:text-5xl">
+            Каталог товаров
+          </h1>
+          <p className="text-content-soft mt-3 text-lg">
+            Небольшая подборка на каждый день. Найдите то, что вам нужно.
+          </p>
+        </div>
+        <ThemeToggle />
       </header>
 
       <SearchField
@@ -75,9 +76,14 @@ export function App() {
       />
 
       <div className="mt-8 mb-5 flex flex-wrap items-center justify-between gap-3">
-        <h2 className="text-2xl font-bold text-slate-900">Все товары</h2>
+        <h2 className="text-content text-2xl font-bold">
+          Все товары
+        </h2>
         {loadState === "success" && (
-          <p className="text-sm text-slate-600" aria-live="polite">
+          <p
+            className="text-muted text-sm"
+            aria-live="polite"
+          >
             Показано: {filteredProducts.length} из {products.length}
           </p>
         )}
@@ -105,19 +111,6 @@ export function App() {
           ))}
         </section>
       )}
-
-      <footer className="mt-9 border-t border-slate-200 pt-8 text-sm text-slate-600">
-        Данные и фотографии —{" "}
-        <a
-          className="font-semibold text-emerald-700 underline-offset-4 hover:underline"
-          href="https://dummyjson.com/docs/products"
-          target="_blank"
-          rel="noreferrer"
-        >
-          DummyJSON
-        </a>
-        . Цены указаны в долларах США.
-      </footer>
     </main>
   );
 }

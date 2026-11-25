@@ -9,7 +9,7 @@ export function ThemeToggle() {
 
   return (
     <button
-      className="border-line-strong bg-surface text-content-soft hover:border-accent hover:text-accent shrink-0 cursor-pointer rounded-lg border px-3 py-2 text-sm font-semibold shadow-sm transition"
+      className="border-line-strong bg-surface text-content-soft hover:border-accent hover:text-accent shrink-0 cursor-pointer rounded-md border px-3 py-2 text-sm font-semibold shadow-sm transition"
       type="button"
       aria-label={actionLabel}
       aria-pressed={isDark}

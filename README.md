@@ -1,6 +1,6 @@
 # Каталог товаров · ДЗ №2
 
-Каталог на Vite и обычном JavaScript. Товары загружаются из [DummyJSON](https://dummyjson.com/docs/products) через `fetch`. Карточки показывают фото, название, категорию и цену в USD. Поиск фильтрует каталог по названию.
+Каталог на React, TypeScript, Vite и Tailwind CSS. Товары загружаются из [DummyJSON](https://dummyjson.com/docs/products) через `fetch`. Карточки показывают фото, название, категорию и цену в USD. Поиск фильтрует каталог по названию.
 
 ## Участники
 
@@ -11,11 +11,15 @@
 
 ## Запуск
 
-Нужен Node.js 22.12 или новее из ветки 22 либо Node.js 24 LTS.
-
 ```sh
 npm ci
 npm run dev
+```
+
+## Проверка типов
+
+```sh
+npm run typecheck
 ```
 
 ## Сборка
@@ -27,5 +31,5 @@ npm run preview
 
 ## Ссылки
 
-- Сайт — https://artem-229.github.io/product-catalog/
-- GitHub — https://github.com/Artem-229/product-catalog
+- Сайт - https://artem-229.github.io/product-catalog/
+- GitHub - https://github.com/gmlazutin/product-catalog-3

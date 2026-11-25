@@ -63,7 +63,7 @@ export function App() {
             Каталог товаров
           </h1>
           <p className="text-content-soft mt-3 text-lg">
-            Небольшая подборка на каждый день. Найдите то, что вам нужно.
+            Небольшая подборка на каждый день.
           </p>
         </div>
         <ThemeToggle />
@@ -89,7 +89,7 @@ export function App() {
         )}
       </div>
 
-      {loadState === "loading" && <StatusMessage message="Загрузка…" />}
+      {loadState === "loading" && <StatusMessage message="Загрузка..." />}
 
       {loadState === "error" && (
         <StatusMessage

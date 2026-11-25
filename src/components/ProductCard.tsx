@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   return (
-    <article className="border-line bg-surface overflow-hidden rounded-2xl border shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+    <article className="border-line bg-surface overflow-hidden rounded-lg border shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
       <div className="bg-surface-muted flex h-56 items-center justify-center p-5">
         <img
           className="h-full w-full object-contain"

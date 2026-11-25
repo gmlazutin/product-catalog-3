@@ -7,7 +7,7 @@ interface SearchFieldProps {
 export function SearchField({ disabled, value, onChange }: SearchFieldProps) {
   return (
     <section
-      className="border-line bg-surface rounded-2xl border p-5 shadow-sm sm:p-6"
+      className="border-line bg-surface rounded-lg border p-5 shadow-sm sm:p-6"
       aria-label="Поиск товаров"
     >
       <label
@@ -18,7 +18,7 @@ export function SearchField({ disabled, value, onChange }: SearchFieldProps) {
       </label>
       <input
         id="search"
-        className="border-line-strong bg-field text-content placeholder:text-muted focus:border-accent focus:ring-focus disabled:bg-disabled w-full rounded-lg border px-4 py-3 text-base outline-none transition focus:ring-3 disabled:cursor-wait"
+        className="border-line-strong bg-field text-content placeholder:text-muted focus:border-accent focus:ring-focus disabled:bg-disabled w-full rounded-md border px-4 py-3 text-base outline-none transition focus:ring-3 disabled:cursor-wait"
         type="search"
         placeholder="Например, apple"
         autoComplete="off"

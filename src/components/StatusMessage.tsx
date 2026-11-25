@@ -11,14 +11,14 @@ export function StatusMessage({
 }: StatusMessageProps) {
   return (
     <div
-      className="border-line bg-surface rounded-2xl border px-6 py-12 text-center shadow-sm"
+      className="border-line bg-surface rounded-lg border px-6 py-12 text-center shadow-sm"
       role="status"
       aria-live="polite"
     >
       <p className="text-content-soft text-base">{message}</p>
       {actionLabel && onAction && (
         <button
-          className="bg-action hover:bg-action-hover mt-5 cursor-pointer rounded-lg px-5 py-3 font-bold text-white transition"
+          className="bg-action text-action-content hover:bg-action-hover mt-5 cursor-pointer rounded-md px-5 py-3 font-bold transition"
           type="button"
           onClick={onAction}
         >

@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: 22
       - run: npm ci
-      - run: npm run build -- --base=/product-catalog/
+      - run: npm run build -- --base=/product-catalog-3/
       - uses: actions/configure-pages@v6
       - uses: actions/upload-pages-artifact@v5
         with:

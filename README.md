@@ -1,4 +1,4 @@
-# Каталог товаров · ДЗ №2
+# Каталог товаров (ДЗ №3)
 
 Каталог на React, TypeScript, Vite и Tailwind CSS. Товары загружаются из [DummyJSON](https://dummyjson.com/docs/products) через `fetch`. Карточки показывают фото, название, категорию и цену в USD. Поиск фильтрует каталог по названию.
 
@@ -31,5 +31,5 @@ npm run preview
 
 ## Ссылки
 
-- Сайт - https://artem-229.github.io/product-catalog/
+- Сайт - https://gmlazutin.github.io/product-catalog-3/
 - GitHub - https://github.com/gmlazutin/product-catalog-3
